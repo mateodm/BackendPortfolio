@@ -3,5 +3,5 @@
 # Click nbfs://nbhost/SystemFileSystem/Templates/Other/Dockerfile to edit this template
 
 FROM alpine:latest
-COPY target/portfolio-0.0.1-SNAPSHOT
-CMD ["/bin/sh"]
+COPY target/portfolio-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
