@@ -3,7 +3,10 @@
 # Click nbfs://nbhost/SystemFileSystem/Templates/Other/Dockerfile to edit this template
 
 # Utiliza una imagen base de Java
-FROM amazoncorreto:11-alpine-jdk
+
+
+FROM amazoncorretto:17-alpine-jdk
 MAINTAINER portfolio
-COPY target/portfolio-0.0.1-SNAPSHOT.jar portfolio-app.jar
-CMD ["java", "-jar", "portfolio-app.jar"]
+COPY target/portfolio-0.0.1-SNAPSHOT.jar portfolio-0.0.1-SNAPSHOT.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","portfolio-0.0.1-SNAPSHOT.jar"]
