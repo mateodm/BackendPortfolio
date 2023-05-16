@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -30,10 +31,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/expeducation")
 @CrossOrigin(origins ="https://fir-portfolio12001324.web.app")
-@GetMapping("/get")
 public class educationController {
     /***LLAMO SERVICE***/
     @Autowired EducationService educationService;
+    @GetMapping("/get")
     public ResponseEntity<List<Education>> list() {
         List<Education> list = educationService.list();
         return new ResponseEntity(list, HttpStatus.OK);
