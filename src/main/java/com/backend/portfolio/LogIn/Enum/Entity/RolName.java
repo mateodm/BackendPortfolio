@@ -8,7 +8,6 @@ package com.backend.portfolio.LogIn.Enum.Entity;
  *
  * @author Mateo De Mari
  */
-
 public enum RolName {
        ROLE_ADMIN, ROLE_USER
 }

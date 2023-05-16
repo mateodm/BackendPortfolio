@@ -21,7 +21,7 @@ public class Rol{
     @NotNull
     @Enumerated(EnumType.STRING)
         private RolName rolName;
-
+    /*** CONSTRUCTOR, GETTERS AND SETTERS ***/
     public Rol() {
     }
 

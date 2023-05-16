@@ -35,7 +35,7 @@ public class User {
     @JoinTable(name = "user_rol", joinColumns = @JoinColumn(name = "user_id"), 
         inverseJoinColumns = @JoinColumn(name = "rol_id"))
     private Set<Rol> roles = new HashSet<>();
-
+    /*** CONSTRUCTOR, GETTERS AND SETTERS ***/
     public User() {
     }
 

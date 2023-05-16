@@ -11,11 +11,12 @@ import java.util.Set;
  *
  * @author Mateo De Mari
  */
+/*** CLASS CREAR USUARIO ***/
 public class NewUser {
     private String name;
     private String password;
     private Set<String> roles = new HashSet<>();
-
+    /*** GETTERS AND SETTERS ***/
     public String getName() {
         return name;
     }

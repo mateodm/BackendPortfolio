@@ -8,6 +8,7 @@ package com.backend.portfolio.LogIn.Enum.Controller;
  *
  * @author Mateo De Mari
  */
+    /*** CLASE GLOBAL MENSAJE ***/
 public class Mensaje {
     private String mensaje;
 

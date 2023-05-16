@@ -32,14 +32,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/auth")
 @CrossOrigin(origins ="https://fir-portfolio12001324.web.app")
 public class Controller {
+    /*** INYECCION DE DEPENDENCIAS ***/
     @Autowired RolService rolService;
     @Autowired JwtProvider jwtProvider;
     @Autowired PasswordEncoder passwordEncoder;
     @Autowired AuthenticationManager authenticationManager;
     @Autowired UserService userService;
+    /*** NEW USER ***/
     @PostMapping("/new")
-    
-    
     public ResponseEntity<?> neww(@Valid @RequestBody NewUser newUser, BindingResult bindingResult) {
         if(bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Los campos ingresados no son los correctos"),HttpStatus.BAD_REQUEST);
@@ -55,8 +55,7 @@ public class Controller {
             return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);           
      }
     
-    
-    
+     /*** LOGIN ***/
     @PostMapping("/login")
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUser loginUser, BindingResult bindingResult){
         if(bindingResult.hasErrors())

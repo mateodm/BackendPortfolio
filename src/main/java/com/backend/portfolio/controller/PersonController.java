@@ -18,20 +18,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin (origins = "https://fir-portfolio12001324.web.app/")
 public class PersonController {
-    @Autowired
-    ServicePerson serviceperson;
+    /*** INYECCION DE DEPENDENCIAS***/
+    @Autowired ServicePerson serviceperson;
+    /*** CREATE PERSON ***/
     @PostMapping("/create/person")
     public String createPerson(@RequestBody Person person) {
         serviceperson.savePerson(person);
         return "Una persona ha sido creada exitosamente";
     }
-
+    /*** DELETE PERSON ***/
     @DeleteMapping("/delete/person/{id}")
     public String deletePerson(@PathVariable Long id) {
         serviceperson.deletePerson(id);
         return "La persona ha sido eliminada exitosamente";
     }
-
+    /*** GET PERSON ***/
     @GetMapping("/get/persons")
     public List<Person> getPerson() {
         return serviceperson.getPerson();
@@ -40,7 +41,7 @@ public class PersonController {
     public Person findPerson() {
         return serviceperson.findPerson((long) 1);
     }
-
+    /*** UPDATE PERSON ***/
     @PutMapping("/edit/person/{id}")
     public Person editPerson(
             @PathVariable Long id,

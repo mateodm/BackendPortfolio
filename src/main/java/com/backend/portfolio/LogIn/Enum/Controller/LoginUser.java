@@ -11,11 +11,11 @@ import jakarta.validation.constraints.NotBlank;
  * @author Mateo De Mari
  */
 public class LoginUser {
-    @NotBlank
+    @NotBlank /*** SI ESTA EN BLANCO ***/
     private String name;
     @NotBlank
     private String password;
-
+    /*** GETTERS AND SETTERS ***/
     public String getName() {
         return name;
     }

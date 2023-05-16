@@ -7,13 +7,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-
+/*** DECLARO QUE ES ENTIDAD ***/
 @Entity
 public class Person {
+    /*** ID AUTOGENERABLE ***/
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotNull
+    @NotNull /*** QUE NO SEA NULO Y QUE ESTABLECER MIN-MAX DE LETRAS ***/
     @Size ( min = 2, max = 20, message = "Tiene que contener más de 2 caracteres")
     private String nombre;
     @NotNull
@@ -22,6 +23,8 @@ public class Person {
     @NotNull
     @Size ( min = 1, max = 150, message = "Tiene que contener más de 2 caracteres y un máximo de 150")
     private String img;
+    
+     /*** GETTERS AND SETTERS ***/
 
     public Long getId() {
         return id;
