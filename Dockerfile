@@ -5,8 +5,8 @@
 # Utiliza una imagen base de Java
 
 
-FROM amazoncorretto:11-alpine-jdk
+FROM amazoncorretto:18-alpine-jd
 MAINTAINER portfolio
 COPY target/portfolio-0.0.1-SNAPSHOT.jar portfolio-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","portfolio-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/portfolio-0.0.1-SNAPSHOT.jar"]
