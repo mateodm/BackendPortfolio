@@ -5,7 +5,7 @@
 # Utiliza una imagen base de Java
 
 
-FROM amazoncorretto: 17-alpine3.17-full
+FROM amazoncorretto: 17-al2023-jdk
 MAINTAINER portfolio
 COPY target/portfolio-0.0.1-SNAPSHOT.jar portfolio-0.0.1-SNAPSHOT.jar
 EXPOSE 8080
