@@ -30,10 +30,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/expeducation")
 @CrossOrigin(origins ="https://fir-portfolio12001324.web.app")
+@GetMapping("/get")
 public class educationController {
     /***LLAMO SERVICE***/
     @Autowired EducationService educationService;
-
     public ResponseEntity<List<Education>> list() {
         List<Education> list = educationService.list();
         return new ResponseEntity(list, HttpStatus.OK);
