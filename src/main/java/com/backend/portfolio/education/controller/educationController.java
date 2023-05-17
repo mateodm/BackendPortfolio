@@ -31,8 +31,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/expedu")
 @CrossOrigin(origins ="https://fir-portfolio12001324.web.app")
 
-
-
 public class educationController {
     /***LLAMO SERVICE***/
     @Autowired EducationService educationService;

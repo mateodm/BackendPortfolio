@@ -7,6 +7,8 @@ C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\ma
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\controller\PersonController.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\LogIn\Enum\DTO\NewUser.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\LogIn\Enum\Service\UserService.java
+C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\education\Dto.java
+C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\education\controller\educationController.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\LogIn\Enum\Service\RolService.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\LogIn\Enum\Entity\RolName.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\service\ServicePerson.java
@@ -18,8 +20,10 @@ C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\ma
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\LogIn\Enum\Controller\Mensaje.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\LogIn\Enum\Service\UserDetailsJWT.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\LogIn\Enum\Security\JWT\JwtProvider.java
+C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\education\repository\EducationRepository.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\LogIn\Enum\Security\JWT\JwtTokenFilter.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\PortfolioApplication.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\LogIn\Enum\Security\JWT\JwtEntryPoint.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\education\entity\Education.java
 C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\entidad\Person.java
+C:\Users\Mateo De Mari\Desktop\angular-argentinaprograma\backendportfolio\src\main\java\com\backend\portfolio\education\service\EducationService.java
