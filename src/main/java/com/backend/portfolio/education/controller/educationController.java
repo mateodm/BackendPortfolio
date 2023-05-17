@@ -44,42 +44,39 @@ public class educationController {
     public ResponseEntity<?> create (@RequestBody Dto dto) {
         if(StringUtils.isBlank(dto.getName())) { 
             return new ResponseEntity(new Mensaje("Falta un campo por llenar"), HttpStatus.BAD_REQUEST);
-        } else {
+        }
         Education education = new Education(dto.getName(), dto.getContenido());
         educationService.save(education);
         return new ResponseEntity(new Mensaje("CREADO"), HttpStatus.ACCEPTED);
-        }
     }
     /*** UPDATE ***/
     @PutMapping("/update/{id}")     /*** SOLICITO DATO A TRAVES DEL URL ***/
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody Dto dto) {
-        if(educationService.existsById(id)) {
+        if(!educationService.existsById(id)) {
+                       return new ResponseEntity( new Mensaje("No se ha encontrado ningún dato con el mismo ID"), HttpStatus.NOT_FOUND);
+        } 
            Education education = educationService.getOne(id).get();
            education.setName(dto.getName());
            education.setContenido(dto.getContenido());
            educationService.save(education);
            return new ResponseEntity(new Mensaje("Cambios realizados con exito"), HttpStatus.ACCEPTED);
-        } 
-        else {
-            return new ResponseEntity( new Mensaje("No se ha encontrado ningún dato con el mismo ID"), HttpStatus.NOT_FOUND);
-        }
     }
     /***DELETE***/
     @DeleteMapping("/delete/{id}") /*** SOLICITO DATO A TRAVES DEL URL ***/
     public ResponseEntity<?> delete(@PathVariable("id")int id) {
-       if(educationService.existsById(id)) {
-            return new ResponseEntity(new Mensaje("Elimnated"), HttpStatus.OK);
-        } else {
+       if(!educationService.existsById(id)) {
             educationService.delete(id);
             return new ResponseEntity(new Mensaje("No se ha encontrado ningún id que coincida"), HttpStatus.NOT_FOUND);
-        }
+       }
+            return new ResponseEntity(new Mensaje("Elimnated"), HttpStatus.OK);
+
     }
     public ResponseEntity<Education> getById(@PathVariable("id") int id) {
-        if(educationService.existsById(id)) {
+        if(!educationService.existsById(id)) {
+                       return new ResponseEntity( new Mensaje("No existe el id indicado"), HttpStatus.NOT_FOUND);
+        } 
             Education education = educationService.getOne(id).get();
             return new ResponseEntity(education, HttpStatus.ACCEPTED);
-        } else {
-            return new ResponseEntity( new Mensaje("No existe el id indicado"), HttpStatus.NOT_FOUND);
-        }
+ 
 }
 }

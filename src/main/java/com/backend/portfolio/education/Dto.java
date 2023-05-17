@@ -4,7 +4,7 @@
  */
 package com.backend.portfolio.education;
 
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 import java.util.logging.Logger;
 
 /**
@@ -12,9 +12,9 @@ import java.util.logging.Logger;
  * @author Mateo De Mari
  */
 public class Dto {
-    /***QUE SU VALOR NO SEA NULO***/
-    @NotNull private String name;
-    @NotNull private String contenido;
+    /***QUE SU VALOR NO TENGA CARACTERES***/
+    @NotBlank private String name;
+    @NotBlank private String contenido;
     /***CONSTRUCTORS, GETTERS AND SETTERS***/
     
     public Dto() {
