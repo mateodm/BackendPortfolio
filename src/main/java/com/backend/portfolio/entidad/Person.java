@@ -23,11 +23,22 @@ public class Person {
     @NotNull
     @Size ( min = 1, max = 150, message = "Tiene que contener más de 2 caracteres y un máximo de 150")
     private String img;
+    @Size ( min = 1, max = 150, message = "Tiene que contener más de 2 caracteres y un máximo de 150")
+    private String aboutMe;
+    @Size ( min = 100, max = 550, message = "Tiene que contener más de 20 caracteres y un máximo de 550")
     
      /*** GETTERS AND SETTERS ***/
 
     public Long getId() {
         return id;
+    }
+
+    public String getAboutMe() {
+        return aboutMe;
+    }
+
+    public void setAboutMe(String aboutMe) {
+        this.aboutMe = aboutMe;
     }
     public void setId(Long id) {
         this.id = id;

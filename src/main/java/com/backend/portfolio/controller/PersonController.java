@@ -54,4 +54,12 @@ public class PersonController {
         person.setImg(newImg);
         return person;
     }
+        @PutMapping("/edit/aboutme/{id}")
+    public Person editPerson(
+            @PathVariable Long id,
+            @RequestParam("") String newAboutMe) {
+        Person person = serviceperson.findPerson(id);
+        person.setAboutMe(newAboutMe);
+        return person;
+    }
 }
