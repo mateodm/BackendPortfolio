@@ -65,9 +65,9 @@ public class educationController {
     @DeleteMapping("/delete/{id}") /*** SOLICITO DATO A TRAVES DEL URL ***/
     public ResponseEntity<?> delete(@PathVariable("id")int id) {
        if(!educationService.existsById(id)) {
-            educationService.delete(id);
             return new ResponseEntity(new Mensaje("No se ha encontrado ningún id que coincida"), HttpStatus.NOT_FOUND);
        }
+                        educationService.delete(id);
             return new ResponseEntity(new Mensaje("Elimnated"), HttpStatus.OK);
 
     }
