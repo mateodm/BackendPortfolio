@@ -10,7 +10,6 @@ import com.backend.portfolio.education.entity.Education;
 import com.backend.portfolio.education.service.EducationService;
 import io.micrometer.common.util.StringUtils;
 import java.util.List;
-import org.aspectj.bridge.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,8 +28,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Mateo De Mari
  */
 @RestController
-@RequestMapping("/expeducation")
+@RequestMapping("/expedu")
 @CrossOrigin(origins ="https://fir-portfolio12001324.web.app")
+
+
+
 public class educationController {
     /***LLAMO SERVICE***/
     @Autowired EducationService educationService;
